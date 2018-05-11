@@ -1,0 +1,14 @@
+version: '2'
+services:
+    SwooleDistributed:
+        container_name: swooledistributed
+        image: mataotao/swooledistributed
+        ports:
+            - "9091:9091"
+            - "9092:9092"
+            - "9093:9093"
+            - "9999:9999"
+        volumes:
+            - ./:/usr/src/sd
+        stdin_open: true
+        tty: true

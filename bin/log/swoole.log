@@ -127,3 +127,7 @@ Stack trace:
 #0 /usr/src/sd/vendor/tmtbe/swooledistributed/src/Server/Components/TimerTask/TimerTask.php(175): Server\SwooleServer->displayErrorHandler(8, 'Undefined index...', '/usr/src/sd/ven...', 175, Array)
 #1 [internal function]: Server\Components\TimerTask\TimerTask->Server\Components\Ti
 [2018-05-11 02:55:51 $1296.0]	WARNING	swManager_check_exit_status: worker#9 abnormal exit, status=255, signal=0
+[2018-05-11 05:06:35 *94.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Cannot declare class app\Controllers\Test\TestController, because the name is already in use in /usr/src/sd/src/app/Controllers/TestController.php on line 24.
+[2018-05-11 05:06:35 $82.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2018-05-11 05:06:51 *102.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Cannot declare class app\Controllers\Test\TestController, because the name is already in use in /usr/src/sd/src/app/Controllers/TestController.php on line 24.
+[2018-05-11 05:06:51 $82.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
