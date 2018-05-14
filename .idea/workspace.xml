@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7023f5c-bbb4-48d9-9b2f-ae72e3d5d9c1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/server/redis/redis.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pid/server.pid" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pid/server.pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/server/nginx/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/redis.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/redis.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +21,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-153">
+              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="redis.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/config/redis.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nginx.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/nginx/nginx.conf">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my.cnf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/mysql/my.cnf">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="redis.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/redis/redis.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="252" column="10" selection-start-line="252" selection-end-line="252" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -44,6 +89,13 @@
       <find>$redis_pool_name</find>
       <find>swoole_redis</find>
       <find>$client</find>
+      <find>data</find>
+      <find>logfile</find>
+      <find>dir</find>
+      <find>dbfilename</find>
+      <find>dbfilename</find>
+      <find>logs</find>
+      <find>log</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -53,7 +105,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Dockerfile" />
-        <option value="$PROJECT_DIR$/src/config/redis.php" />
         <option value="$PROJECT_DIR$/src/config/consul.php" />
         <option value="$PROJECT_DIR$/src/config/business.php" />
         <option value="$PROJECT_DIR$/src/app/Views/welcome.blade.php" />
@@ -65,8 +116,11 @@
         <option value="$USER_HOME$/Desktop/test.html" />
         <option value="$PROJECT_DIR$/src/app/Controllers/Test/TestController.php" />
         <option value="$PROJECT_DIR$/docker-compose.yml.bak" />
-        <option value="$PROJECT_DIR$/server/nginx/nginx.conf" />
+        <option value="$PROJECT_DIR$/src/config/redis.php" />
+        <option value="$PROJECT_DIR$/server/redis/redis.conf" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/server/nginx/nginx.conf" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -124,61 +178,41 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="swooledistributed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swooledistributed" type="462c0819:PsiDirectoryNode" />
+              <item name="sd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="swooledistributed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swooledistributed" type="462c0819:PsiDirectoryNode" />
+              <item name="sd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sd" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="swooledistributed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swooledistributed" type="462c0819:PsiDirectoryNode" />
+              <item name="sd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sd" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="mysql" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="swooledistributed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swooledistributed" type="462c0819:PsiDirectoryNode" />
+              <item name="sd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sd" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="nginx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sd" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="redis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swooledistributed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swooledistributed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swooledistributed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swooledistributed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swooledistributed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swooledistributed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="swooledistributed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swooledistributed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -191,11 +225,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\sd\server\redis" />
+      <recent name="E:\sd\server\mysql" />
+      <recent name="E:\sd" />
       <recent name="E:\swooledistributed\server\mysql" />
       <recent name="E:\swooledistributed\server\redis" />
-      <recent name="E:\swooledistributed\server\nginx" />
-      <recent name="E:\swooledistributed" />
-      <recent name="E:\swooledistributed\vendor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -223,11 +257,12 @@
       <workItem from="1525922026596" duration="13554000" />
       <workItem from="1526000659901" duration="8870000" />
       <workItem from="1526012098341" duration="16158000" />
+      <workItem from="1526282467084" duration="1279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38582000" />
+    <option name="totallyTimeSpent" value="39861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -242,12 +277,11 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Mongo Explorer" order="3" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.261723" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.42529988" />
       <window_info anchor="right" id="JSON Viewer" order="4" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16204691" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -257,6 +291,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,33 +301,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/tmtbe/swooledistributed/src/Server/Controllers/MqttController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/tmtbe/swooledistributed/src/Server/Controllers/Test.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lua/sadd_from_count.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config/docker/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/redis.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -406,16 +419,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Controllers/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Controllers/web/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Controllers/TestController.php" />
+    <entry file="file://$PROJECT_DIR$/src/app/Controllers/web/.gitkeep" />
     <entry file="file://$PROJECT_DIR$/vendor/tmtbe/swooledistributed/src/Server/SwooleWebSocketServer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -442,9 +447,7 @@
         <state relative-caret-position="-2805" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Controllers/ws/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Controllers/ws/.gitkeep" />
     <entry file="file://$PROJECT_DIR$/vendor/tmtbe/swooledistributed/src/Server/SwooleDistributedServer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -480,9 +483,7 @@
         <state relative-caret-position="-132" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/Dockerfile.bak">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/Dockerfile.bak" />
     <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -501,13 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/nginx/nginx.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -545,10 +539,41 @@
     <entry file="file://$PROJECT_DIR$/server/redis/.gitkeep">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/redis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/mysql/my.cnf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/redis/redis.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="252" column="10" selection-start-line="252" selection-end-line="252" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/nginx/nginx.conf">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
