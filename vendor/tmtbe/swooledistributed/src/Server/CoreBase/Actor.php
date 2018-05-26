@@ -145,6 +145,7 @@ abstract class Actor extends CoreBase
     /**
      * 处理函数
      * @param $data
+     * @throws \Exception
      */
     protected function handle($data)
     {
@@ -162,7 +163,7 @@ abstract class Actor extends CoreBase
             }
         }
         try {
-            $generator = \co::call_user_func_array([$this, $function], $params);
+            $generator = sd_call_user_func_array([$this, $function], $params);
         } catch (\Throwable $e) {
             $generator = new RPCThrowable($e);
         }
@@ -186,6 +187,7 @@ abstract class Actor extends CoreBase
      * 结束事务
      * @param $beginId
      * @return bool
+     * @throws \Exception
      */
     public function end($beginId)
     {
@@ -213,6 +215,7 @@ abstract class Actor extends CoreBase
      * @param $token
      * @param $result
      * @param $node
+     * @throws \Exception
      */
     protected function rpcBack($workerId, $token, $result, $node)
     {
@@ -239,12 +242,16 @@ abstract class Actor extends CoreBase
     /**
      * 恢复注册
      * recoveryRegister
+     * @throws \Exception
      */
     public function recoveryRegister()
     {
         ProcessManager::getInstance()->getRpcCall(ClusterProcess::class)->recoveryRegisterActor($this->name);
     }
 
+    /**
+     * @throws \Exception
+     */
     public function destroy()
     {
         ProcessManager::getInstance()->getRpcCall(ClusterProcess::class)->my_removeActor($this->name);
@@ -275,6 +282,7 @@ abstract class Actor extends CoreBase
      * @param $ms
      * @param $callback
      * @param $user_param
+     * @return int
      */
     public function tick($ms, $callback, $user_param = null)
     {
@@ -294,6 +302,7 @@ abstract class Actor extends CoreBase
      * @param $ms
      * @param $callback
      * @param $user_param
+     * @return int
      */
     public function after($ms, $callback, $user_param = null)
     {
@@ -338,6 +347,7 @@ abstract class Actor extends CoreBase
      * @param null $bindId
      * @param callable|null $set
      * @return EventCoroutine
+     * @throws \Exception
      */
     public static function call($actorName, $call, $params = null, $oneWay = false, $bindId = null, callable $set = null)
     {
@@ -387,6 +397,7 @@ abstract class Actor extends CoreBase
      * 是否存在
      * @param $name
      * @return bool
+     * @throws \Exception
      */
     public static function has($name)
     {
@@ -401,6 +412,7 @@ abstract class Actor extends CoreBase
     /**
      * 销毁Actor
      * @param $name
+     * @throws \Exception
      */
     public static function destroyActor($name)
     {
@@ -409,6 +421,7 @@ abstract class Actor extends CoreBase
 
     /**
      * 销毁全部
+     * @throws \Exception
      */
     public static function destroyAllActor()
     {
@@ -418,7 +431,7 @@ abstract class Actor extends CoreBase
     /**
      * 恢复Actor
      * @param $worker_id
-     * @return \Generator
+     * @return void
      */
     public static function recovery($worker_id)
     {

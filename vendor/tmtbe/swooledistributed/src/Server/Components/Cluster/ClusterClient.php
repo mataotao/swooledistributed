@@ -33,11 +33,12 @@ class ClusterClient
         $this->client->set($this->pack->getProbufSet());
         $this->token = 0;
         $this->client->on("connect", function ($cli) {
+            $this->isClose = false;
             if (!empty($this->reconnect_tick)) {
                 swoole_timer_clear($this->reconnect_tick);
                 $this->reconnect_tick = null;
             }
-            \co::call_user_func($this->onConnect, $this);
+            sd_call_user_func($this->onConnect, $this);
         });
         $this->client->on("receive", function ($cli, $recdata) {
             $data = $this->pack->unPack($recdata);
@@ -53,6 +54,7 @@ class ClusterClient
             }
         });
         $this->client->on("close", function ($cli) {
+            $this->isClose = true;
             if (empty($this->reconnect_tick)) {
                 $this->reconnect_tick = swoole_timer_tick(1000, [$this, 'reConnect']);
             }
@@ -123,6 +125,7 @@ class ClusterClient
     public function close()
     {
         $this->isClose = true;
+        $this->client->close();
         if (!empty($this->reconnect_tick)) {
             swoole_timer_clear($this->reconnect_tick);
             $this->reconnect_tick = null;

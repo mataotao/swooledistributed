@@ -1,18 +1,6 @@
 version: '2'
 services:
-    nginx:
-        container_name: nginx
-        image: nginx:1.13.12
-        ports:
-            - "80:80"
-        volumes:
-            - ./server/nginx/nginx.conf:/etc/nginx/nginx.conf
-            - ./server/nginx/logs:/logs
-        stdin_open: true
-        tty: true
-        links:
-          - swooleDistributed
-    swooleDistributed:
+    SwooleDistributed:
         container_name: swooledistributed
         image: mataotao/swooledistributed
         ports:
@@ -24,38 +12,4 @@ services:
             - ./:/usr/src/sd
         stdin_open: true
         tty: true
-        links:
-          - redis
-          - mysql
-        depends_on:
-          - redis
-          - mysql
         #command: php /usr/src/sd/bin/start_swoole_server.php start
-    redis:
-         container_name: redis
-         image: redis:4.0.2
-         ports:
-           - "6379:6379"
-         volumes:
-           - ./server/redis/redis.conf:/etc/redis/redis.conf
-           - ./server/redis/data:/data
-           - ./server/redis/logs:/logs
-           - ./server/redis/redis_cache:/redis_cache
-    mysql:
-        container_name: mysql
-        image: mysql:5.7.22
-        ports:
-            - "3306:3306"
-        volumes:
-            - ./server/mysql/data:/var/lib/mysql
-            - ./server/mysql/logs:/logs
-            - ./server/mysql/my.cnf:/etc/my.cnf
-        environment:
-            MYSQL_USER: root
-            MYSQL_PASSWORD: 123456
-            MYSQL_ROOT_PASSWORD: 123456
-            MYSQL_DATABASE: manager
-
-        stdin_open: true
-        tty: true
-
