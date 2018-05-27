@@ -13,3 +13,9 @@ services:
         stdin_open: true
         tty: true
         #command: php /usr/src/sd/bin/start_swoole_server.php start
+    consul:
+         container_name: consul
+         image: centos
+         ports:
+           - '80:80'
+         tty: true
